@@ -15,12 +15,24 @@ function NotFound() {
   );
 }
 
+function HomePage() {
+  return (
+    <>
+      <h1>Blog App</h1>
+      <Link to='posts/all' className='btn btn-success my-5'>
+        Get Started
+      </Link>
+    </>
+  );
+}
+
 function App() {
   return (
     <div className='App container'>
       <Router>
         <Switch>
-          <Route path='/all' exact component={ViewPosts} />
+          <Route path='/' exact component={HomePage} />
+          <Route path='/posts/all' exact component={ViewPosts} />
           <Route path='/posts/:id' exact component={ViewPostDetails} />
           <Route component={NotFound} />
         </Switch>

@@ -1,11 +1,11 @@
 import React from 'react';
 import '../App.css';
 
-function LoadMore({ onclick }) {
+function LoadMore({ onclick, disabled }) {
   return (
-    <div style={{ width: '100%' }} className='btn btn-light mb-3' onClick={onclick}>
+    <button style={{ width: '100%' }} className='btn btn-light mb-3' onClick={onclick} disabled={disabled}>
       Load more
-    </div>
+    </button>
   );
 }
 

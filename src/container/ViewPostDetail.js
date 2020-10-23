@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Post from '../components/Post';
-import Comment from '../components/Comment';
+import CommentList from '../components/CommentList';
+import { Link } from 'react-router-dom';
+import Loader from '../components/Loader';
 
 function ViewPostDetails(props) {
   const { id } = props.match.params;
@@ -19,16 +21,21 @@ function ViewPostDetails(props) {
     };
 
     renderPostDetails();
-  }, []);
+  }, [id]);
 
-  if (state.isLoading) return 'loading..';
+  if (state.isLoading) return <Loader />;
 
   return (
-    <div className='mx-5 my-5'>
-      <Post title={state.post.title} body={state.post.body} />
-      <h3 className='text-left mt-5'>Comments</h3>
-      <Comment comments={state.post.comments} />
-    </div>
+    <>
+      <div className='mx-5 my-5'>
+        <Post title={state.post.title} body={state.post.body} />
+        <h3 className='text-left mt-5'>Comments</h3>
+        <CommentList comments={state.post.comments} />
+        <Link to='/posts/all' className='btn btn-link float-right mb-5'>
+          Back to all Posts
+        </Link>
+      </div>
+    </>
   );
 }
 
