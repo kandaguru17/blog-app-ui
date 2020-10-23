@@ -12,7 +12,7 @@ function Post({ title, body }) {
             <p className='text-left'>
               <strong>Description:</strong>
             </p>
-            <p class='card-text'>{body}</p>
+            <p class='card-text text-left'>{body}</p>
           </div>
         </div>
       </div>
