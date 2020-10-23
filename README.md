@@ -2,11 +2,6 @@
 
 This is the UI project built using react (create-react-app).
 
-##### _Note_:
-
-**In order to run this project make sure the api project is up and running as it consumes the related endpoints from it.
-The Api project could be found at `https://github.com/kandaguru17/blog-app-api.git`**.
-
 ### Dependencies
 
 This project uses :
@@ -26,6 +21,11 @@ This project uses :
 
 To run the application
 
-1. clone the repositary `https://github.com/kandaguru17/blog-app-ui.git`
+1. clone the repository `https://github.com/kandaguru17/blog-app-ui.git`
 2. move to the directory where package.json is located
-3. run `npm install && npm start`
+3. run `npm install && npm start`,this would pull all the required dependencies and would start the app automatically in the default browser
+
+##### _Note_:
+
+**In order to run this project make sure the api project is up and running as it consumes the related endpoints from it.
+The Api project could be found at `https://github.com/kandaguru17/blog-app-api.git`**.
