@@ -1,8 +1,11 @@
 ## Blog App UI
 
 This is the UI project built using react (create-react-app).
-In order to run this project make sure the api project is up and running as it consumes the related endpoints from it.
-The Api project could be found at `https://github.com/kandaguru17/blog-app-api.git`
+
+##### _Note_:
+
+**In order to run this project make sure the api project is up and running as it consumes the related endpoints from it.
+The Api project could be found at `https://github.com/kandaguru17/blog-app-api.git`**.
 
 ### Dependencies
 
