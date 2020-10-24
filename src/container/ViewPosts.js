@@ -10,7 +10,7 @@ const POST_BASE_URI = 'http://localhost:8080/api/posts';
 
 function ViewPosts() {
   const [state, setState] = useState({ isLoading: true, results: [], error: '', pageEnd: false });
-  const [filter, setFilter] = useState({ offset: { isIncremented: false, value: 0 }, keyword: '' });
+  const [filter, setFilter] = useState({ offset: { toggle: false, value: 0 }, keyword: '' });
 
   useEffect(() => {
     const getAllPosts = async () => {
@@ -27,7 +27,7 @@ function ViewPosts() {
     };
 
     getAllPosts();
-  }, [filter.offset.isIncremented]);
+  }, [filter.offset.toggle]);
 
   const renderPosts = () => {
     const { results } = state;
@@ -37,7 +37,7 @@ function ViewPosts() {
   const onLoadMore = () => {
     setFilter((prevState) => ({
       ...prevState,
-      offset: { value: prevState.offset.value + 1, isIncremented: !prevState.offset.isIncremented },
+      offset: { value: prevState.offset.value + 1, toggle: !prevState.offset.toggle },
     }));
   };
 
@@ -66,7 +66,7 @@ function ViewPosts() {
       </div>
       <div className='row'>
         {renderPosts()}
-        <LoadMore onclick={onLoadMore} disabled={state.pageEnd} />
+        <LoadMore onclick={onLoadMore} disabled={state.pageEnd || state.isLoading} />
       </div>
     </div>
   );
