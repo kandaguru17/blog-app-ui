@@ -6,16 +6,16 @@ This is the UI project built using react (create-react-app).
 
 This project uses :
 
-- Axios : To consume the Restful API endpoints
+- axios : To consume the Restful API endpoints
 - react-router-dom : To Route between components
-- Bootstrap/jquery/popper.js: Styling utilities
+- bootstrap/jquery/popper.js: Styling utilities
 
 ### Features
 
 - View a list of posts
 - View each post in detail with the associated comments
-- pagination
-- search function to filter the post list based on a keyword present in title or body of the post
+- Pagination
+- Search function to filter the post list based on a keyword present in title or body of the post
 
 ### Run
 

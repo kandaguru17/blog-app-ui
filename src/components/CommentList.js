@@ -3,15 +3,15 @@ import Comment from './Comment';
 
 function CommentList({ comments }) {
   const renderComments = () => {
-    return comments.map((comment) => <Comment comment={comment} />);
+    return comments.map((comment) => <Comment key={comment.id} comment={comment} />);
   };
 
   return (
-    <div class='row my-3'>
-      <div class='col-8'>
-        <div class='panel panel-default'>
-          <div class='panel-body'>
-            <ul class='media-list'>{renderComments()}</ul>
+    <div className='row my-3'>
+      <div className='col-8'>
+        <div className='panel panel-default'>
+          <div className='panel-body'>
+            <ul className='media-list'>{renderComments()}</ul>
           </div>
         </div>
       </div>

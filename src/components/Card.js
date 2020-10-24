@@ -9,7 +9,7 @@ function Card({ title, body, id }) {
           <strong>{title}</strong>
         </h5>
         <p className='card-text'>{body.substring(0, 80)}...</p>
-        <Link to={`/posts/${id}`} className='btn btn-primary'>
+        <Link to={`/posts/${id}`} className='btn btn-info'>
           Read more
         </Link>
       </div>

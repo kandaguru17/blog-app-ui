@@ -16,7 +16,6 @@ function ViewPostDetails(props) {
     const POST_URL_EXPAND = `http://localhost:8080/api/posts/${id}?expand=true`;
     const renderPostDetails = async () => {
       const response = await axios.get(POST_URL_EXPAND);
-      console.log(response.data);
       setState((prevState) => ({ ...prevState, isLoading: false, post: response.data }));
     };
 

@@ -55,9 +55,13 @@ function ViewPosts() {
 
   if (state.isLoading) return <Loader />;
 
+  const renderMessage = () => {
+    if (state.results.length === 0) return <p className='mx-auto'>No results found </p>;
+  };
+
   return (
     <div>
-      <h2 className='my-3'>All Blog Posts</h2>
+      <h2 className='my-3'>Blog Posts</h2>
       <div className='row'>
         <SearchBox
           onKeywordChange={(value) => setFilter((prevState) => ({ ...prevState, keyword: value }))}
@@ -65,6 +69,7 @@ function ViewPosts() {
         />
       </div>
       <div className='row'>
+        {renderMessage()}
         {renderPosts()}
         <LoadMore onclick={onLoadMore} disabled={state.pageEnd || state.isLoading} />
       </div>
