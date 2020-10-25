@@ -23,7 +23,7 @@ To run the application
 
 1. clone the repository `https://github.com/kandaguru17/blog-app-ui.git`
 2. move to the directory where package.json is located
-3. run `npm install && npm start`,this would pull all the required dependencies and would start the app automatically in the default browser
+3. run `npm install && npm start` on the terminal/cmd ,this would pull all the required dependencies and would start the app automatically in the default browser
 
 ##### _Note_:
 
